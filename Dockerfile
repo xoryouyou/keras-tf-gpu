@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0
+FROM nvidia/cuda:8.0-cudnn5-runtime-ubuntu16.04
 
 MAINTAINER Till von Ahnen "xoryouyou@gmail.com"
 
@@ -15,3 +15,9 @@ RUN pip3 install --upgrade pip
 
 # install everything needed
 RUN pip3 install tensorflow-gpu numpy scipy scikit-learn pillow h5py keras
+
+# setup missing locale
+RUN locale-gen en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
