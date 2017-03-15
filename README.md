@@ -1,11 +1,13 @@
 # keras-tf-gpu
-Docker image for keras using tensorflow-gpu
+Docker image for keras using tensorflow-gpu based on ubuntu 16.04
 
 It includes:
 
 * cuda 8.0
+* cudnn 5.0
 * tensorflow 1.0
-* keras
+* keras 2.0
+
 
 ## Usage
 
@@ -13,4 +15,4 @@ It includes:
 
 When using tensorboard just put it in the background for example:
 
-`tensorboard --log-dir=/tmp/logs &`
+`tensorboard --logdir=/tmp/logs &`
